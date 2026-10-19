@@ -1,0 +1,20 @@
+query CartTransformRunInput {
+  cart {
+    lines {
+      id
+      bundleItems: attribute(key: "_bundle_items") {
+        value
+      }
+      merchandise {
+        __typename
+        ... on ProductVariant {
+          product {
+            bundleSize: metafield(namespace: "custom", key: "bundle_size") {
+              value
+            }
+          }
+        }
+      }
+    }
+  }
+}

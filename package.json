@@ -1,0 +1,13 @@
+{
+  "name": "magyx-cart-transform",
+  "private": true,
+  "type": "module",
+  "workspaces": ["extensions/*"],
+  "scripts": {
+    "dev": "shopify app dev",
+    "deploy": "shopify app deploy"
+  },
+  "devDependencies": {
+    "@shopify/cli": "^3.86.1"
+  }
+}

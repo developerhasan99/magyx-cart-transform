@@ -1,0 +1,62 @@
+{
+  "payload": {
+    "export": "cart-transform-run",
+    "target": "cart.transform.run",
+    "input": {
+      "cart": {
+        "lines": [
+          {
+            "id": "gid://shopify/CartLine/1",
+            "bundleItems": {
+              "value": "47306554933506,47306556342530,47306582130946,47306580787458,47306557063426,47306554933506"
+            },
+            "merchandise": {
+              "__typename": "ProductVariant",
+              "product": { "bundleSize": { "value": "6" } }
+            }
+          },
+          {
+            "id": "gid://shopify/CartLine/2",
+            "bundleItems": null,
+            "merchandise": {
+              "__typename": "ProductVariant",
+              "product": { "bundleSize": null }
+            }
+          },
+          {
+            "id": "gid://shopify/CartLine/3",
+            "bundleItems": { "value": "47306554933506,47306556342530" },
+            "merchandise": {
+              "__typename": "ProductVariant",
+              "product": { "bundleSize": null }
+            }
+          },
+          {
+            "id": "gid://shopify/CartLine/4",
+            "bundleItems": { "value": "47306554933506,47306556342530,47306582130946,47306580787458,47306557063426,47306554933506,47306554933506" },
+            "merchandise": {
+              "__typename": "ProductVariant",
+              "product": { "bundleSize": { "value": "6" } }
+            }
+          }
+        ]
+      }
+    },
+    "output": {
+      "operations": [
+        {
+          "lineExpand": {
+            "cartLineId": "gid://shopify/CartLine/1",
+            "expandedCartItems": [
+              { "merchandiseId": "gid://shopify/ProductVariant/47306554933506", "quantity": 2 },
+              { "merchandiseId": "gid://shopify/ProductVariant/47306556342530", "quantity": 1 },
+              { "merchandiseId": "gid://shopify/ProductVariant/47306582130946", "quantity": 1 },
+              { "merchandiseId": "gid://shopify/ProductVariant/47306580787458", "quantity": 1 },
+              { "merchandiseId": "gid://shopify/ProductVariant/47306557063426", "quantity": 1 }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

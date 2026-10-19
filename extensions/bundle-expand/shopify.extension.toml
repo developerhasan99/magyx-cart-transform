@@ -1,0 +1,17 @@
+api_version = "2026-07"
+uid = "cc1ad498-6aab-37c2-97d8-4b7df16f59f4778efd2b"
+
+[[extensions]]
+name = "Bundle expand"
+handle = "bundle-expand"
+type = "function"
+description = "Expands bundle builder lines into their component variants via the _bundle_items property."
+
+  [[extensions.targeting]]
+  target = "cart.transform.run"
+  input_query = "src/cart_transform_run.graphql"
+  export = "cart-transform-run"
+
+  [extensions.build]
+  command = ""
+  path = "dist/function.wasm"
